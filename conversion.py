@@ -40,15 +40,3 @@ def mantissa(num_string):
     except (ValueError, IndexError):
         return (False, 0, 0)
     
-# Test characteristic
-print(characteristic("123.456"))    # (True, 123)
-print(characteristic("-45.5"))      # (True, -45)
-print(characteristic("0.999"))      # (True, 0)
-print(characteristic("invalid"))    # (False, 0)
-
-# Test mantissa
-print(mantissa("123.456"))          # (True, 57, 125) - 456/1000 reduced
-print(mantissa("0.5"))              # (True, 1, 2)
-print(mantissa("0.25"))             # (True, 1, 4)
-print(mantissa("1.0"))              # (False, 0, 0) - empty fractional part
-print(mantissa("42"))               # (True, 0, 1) - no decimal point
